@@ -1,6 +1,7 @@
-const leads = require('./leads/leads.service.js');
 const users = require('./users/users.service.js');
+const leads = require('./leads/leads.service.js');
 module.exports = function () {
-  app.configure(leads);
+  const app = this; // eslint-disable-line no-unused-vars
   app.configure(users);
+  app.configure(leads);
 };
